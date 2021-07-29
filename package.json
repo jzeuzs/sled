@@ -1,6 +1,6 @@
 {
 	"name": "@tomiocodes/sled",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A simple key-value database.",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
@@ -57,6 +57,9 @@
 	"license": "Apache-2.0",
 	"bugs": {
 		"url": "https://github.com/1chiSensei/sled/issues"
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"homepage": "https://sled.vercel.app",
 	"devDependencies": {
