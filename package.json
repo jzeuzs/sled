@@ -1,0 +1,105 @@
+{
+	"name": "@tomiocodes/sled",
+	"version": "1.0.0",
+	"description": "A simple key-value database.",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		"import": "./dist/index.mjs",
+		"require": "./dist/index.js"
+	},
+	"scripts": {
+		"test": "jest",
+		"ts:build": "tsup --dts --format esm,cjs",
+		"prettier": "prettier . --write",
+		"build": "run-p ts:build rs:build",
+		"rs:build": "napi build --platform --release",
+		"ver": "napi version",
+		"artifacts": "napi artifacts",
+		"docs": "typedoc",
+		"fmt": "cargo fmt",
+		"format": "run-p prettier fmt",
+		"prepublishOnly": "napi prepublish -t npm"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/1chiSensei/sled.git"
+	},
+	"napi": {
+		"name": "sled",
+		"triples": {
+			"defaults": true,
+			"additional": [
+				"armv7-unknown-linux-gnueabihf",
+				"x86_64-unknown-linux-musl",
+				"aarch64-unknown-linux-gnu",
+				"aarch64-unknown-linux-musl",
+				"aarch64-apple-darwin",
+				"aarch64-linux-android"
+			]
+		}
+	},
+	"keywords": [
+		"key",
+		"value",
+		"key-value",
+		"keyv",
+		"sled",
+		"rust",
+		"napi"
+	],
+	"files": [
+		"lib",
+		"dist"
+	],
+	"author": "Yoshida Tomio <https://tomio.codes>",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/1chiSensei/sled/issues"
+	},
+	"homepage": "https://github.com/1chiSensei/sled#readme",
+	"devDependencies": {
+		"@jjwesterkamp/typedoc-theme": "^1.2.0",
+		"@napi-rs/cli": "^1.1.0",
+		"@sapphire/eslint-config": "^3.2.3",
+		"@sapphire/prettier-config": "^1.1.6",
+		"@sapphire/ts-config": "^3.0.0",
+		"@swc/jest": "^0.1.4",
+		"@types/jest": "^26.0.24",
+		"@types/node": "^16.4.3",
+		"eslint": "^7.31.0",
+		"jest": "^27.0.6",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^2.3.2",
+		"tsup": "^4.12.5",
+		"typedoc": "^0.21.4",
+		"typescript": "^4.3.5"
+	},
+	"dependencies": {
+		"@node-rs/helper": "^1.2.1"
+	},
+	"prettier": "@sapphire/prettier-config",
+	"eslintConfig": {
+		"extends": "@sapphire/eslint-config"
+	},
+	"tsup": {
+		"splitting": false,
+		"sourcemap": true,
+		"clean": true,
+		"minify": true,
+		"entryPoints": [
+			"src/**/*.ts"
+		]
+	},
+	"jest": {
+		"testMatch": [
+			"<rootDir>/tests/**/*.test.ts"
+		],
+		"transform": {
+			"^.+\\.ts$": "@swc/jest"
+		},
+		"testEnvironment": "node",
+		"maxWorkers": 1
+	}
+}
