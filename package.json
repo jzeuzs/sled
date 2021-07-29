@@ -58,7 +58,7 @@
 	"bugs": {
 		"url": "https://github.com/1chiSensei/sled/issues"
 	},
-	"homepage": "https://github.com/1chiSensei/sled#readme",
+	"homepage": "https://sled.vercel.app",
 	"devDependencies": {
 		"@jjwesterkamp/typedoc-theme": "^1.2.0",
 		"@napi-rs/cli": "^1.1.0",

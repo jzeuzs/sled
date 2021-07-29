@@ -69,4 +69,4 @@ console.log(get('hello'));
 
 ## API Documentation
 
-For the full API documentation please refer to the TypeDoc generated [documentation](#).
+For the full API documentation please refer to the TypeDoc generated [documentation](https://sled.vercel.app).
