@@ -10,7 +10,6 @@ describe('all', () => {
 	it('should return all of the key-value pairs', () => {
 		const arr = all();
 
-
 		expect(arr).toEqual([{ amo: 'gus' }, { int: 1 }, { obj: { o: 'bj' } }]);
 	});
 });
