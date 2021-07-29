@@ -1,0 +1,19 @@
+{
+	"name": "@tomiocodes/sled-linux-arm-gnueabihf",
+	"version": "1.0.0",
+	"os": [
+		"linux"
+	],
+	"cpu": [
+		"arm"
+	],
+	"main": "sled.linux-arm-gnueabihf.node",
+	"files": [
+		"sled.linux-arm-gnueabihf.node"
+	],
+	"license": "Apache-2.0",
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": "https://github.com/1chiSensei/sled"
+}
