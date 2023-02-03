@@ -64,7 +64,7 @@
 	"homepage": "https://sled.vercel.app",
 	"devDependencies": {
 		"@jjwesterkamp/typedoc-theme": "^1.2.0",
-		"@napi-rs/cli": "^1.1.0",
+		"@napi-rs/cli": "^2.14.6",
 		"@sapphire/eslint-config": "^3.2.3",
 		"@sapphire/prettier-config": "^1.1.6",
 		"@sapphire/ts-config": "^3.0.0",
